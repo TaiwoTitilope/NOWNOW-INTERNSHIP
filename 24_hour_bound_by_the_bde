@@ -1,0 +1,6 @@
+select /*msisdn, name*/ distinct UPPER(name) bde, UPPER(managersname) manager, sum(amount) as value, count(*) as volume from mfscore.t_ma_work_profession_master
+left join mfscore.t_um_user_identity on mfscore.t_um_user_identity.work_id=mfscore.t_ma_work_profession_master.id
+left join mfscore.t_wm_transaction_logs on mfscore.t_wm_transaction_logs.from_entity_id = mfscore.t_um_user_identity.entity_id
+where user_type=83 and mfscore.t_wm_transaction_logs.insert_date BETWEEN DATEADD(day, -1, sysdate) AND sysdate
+group by name, managersname
+order by value asc
