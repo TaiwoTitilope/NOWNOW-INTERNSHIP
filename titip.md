@@ -11,3 +11,11 @@
 ###### I am getting good at this, I am proud of myself.
 ---
 I WANT **THAT**
+---
+> #### The quarterly results look great!
+>
+> - Revenue was off the chart.
+> - Profits were higher than ever.
+>
+>  *Everything* is going according to **plan**.
+
